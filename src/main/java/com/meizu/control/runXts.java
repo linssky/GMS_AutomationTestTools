@@ -1,0 +1,104 @@
+package com.meizu.control;
+
+import com.meizu.utils.*;
+import com.sun.java.browser.plugin2.liveconnect.v1.Result;
+
+import javax.swing.*;
+import java.io.IOException;
+
+/**
+ * Created by wuchaolin on 17-11-28.
+ */
+public class runXts {
+
+    //localhost:8080/GMSTest/xts?SN=adf&XTS=cts&arm=64&firmpath=fdsfds&command=null&taskId=9
+    public static Result goXTS( String SN, String XTS, String arm,  String firmPath,
+                               String command, String taskId) throws IOException, InterruptedException {
+
+
+                System.out.println("开始"+XTS+"测试！---");
+
+
+
+        String[] run=new String[2];
+        PhoneReadyHelper ph=new PhoneReadyHelper();
+        try {
+            if (SN.toLowerCase().trim().equals("all")){
+                WebServiceBean.sendStutaPost(taskId,"1",XTS.toUpperCase()+"手机配置中！");//发送状态给服务器
+            }
+            run=ph.PhoneReady(SN,firmPath,XTS,taskId);//升级固件，手机环境配置都在这个里面
+        } catch (Exception  e) {
+
+        }
+
+        if (run[0].trim().equals("yes")) {//如果环境配置成功
+            RunCTSUtils runCTSUtils = new RunCTSUtils();
+            WebServiceBean.sendStutaPost(taskId,"4",XTS.toUpperCase()+"测试中！");//发送状态给服务器
+            String[] resluts = new String[5];
+
+            try {
+                resluts = runCTSUtils.GoRun(SN, arm, XTS, command, taskId); //1是结果路径，2是fail数量，3是已跑模块，4是总模块.5是pass数量
+
+            }catch (NullPointerException e){
+                System.out.println("---------XTS异常，到catch里面来了");
+                resluts[0]="crash";
+                resluts[1]=XTS.toUpperCase().trim()+"测试异常中断,请在电脑中检查测试包是否存在！";
+            }
+
+            String[] resluts0=new String[5];
+            String resluts1 = null;
+            if (!resluts[0].trim().toString().equals("crash")) {//XTS测试没有出现异常
+                if (resluts[3]==null||resluts[3].trim().equals("0")){//如果总模块是0
+                    WebServiceBean.sendStutaPost(taskId,"-1",XTS+"测试未正常执行，请检查测试内容是否正确！");//发送状态给服务器
+                }else {//
+                    try {
+                        WebServiceBean.sendStutaPost(taskId,"5",XTS.toUpperCase()+"Retry中！");//发送状态给服务器
+                        resluts0 = runCTSUtils.RetryXts(SN, resluts, XTS);//retry
+                        resluts1=resluts0[0];
+                    } catch (Exception e) {
+                    }
+
+                    //// TODO: 17-12-18 单独验证fail项并更新到数据库中
+
+                    copyResultAndLogs cr = new copyResultAndLogs();
+
+                    // TODO: 17-12-18 将结果文档分类压缩放到服务器固定地址
+
+
+
+                    /**1是结果路径，2是fail数量，3是已跑模块，4是总模块,5是pass数量**/
+
+                    try {
+                        for (int i=0;i<4;i++) {//判断获取到的结果值是否正常，否则写入0
+                            if (resluts0[i+1] == null || resluts1.trim().equals("")) {
+                                resluts0[i+1] = "0";
+                            }
+                        }
+                        cr.copyResultAndLogs(resluts1, XTS, SN, command);//拷贝结果
+                        cr.sendto121();//发送结果到121服务器
+                        WebServiceBean.sendStutaPost(taskId,"7",XTS.toUpperCase()+"测试完成！"+"&passed="+resluts0[4]+"&failed="+resluts0[1]+"&doneM="+resluts0[2]+"&totalM="+resluts0[3]);//发送状态给服务器
+
+                    } catch (Exception e) {//如果上面的结果拷贝失败，则拷贝最原始的结果
+                        for (int i=0;i<4;i++) {//判断获取到的结果值是否正常，否则写入0
+                            if (resluts[i+1] == null || resluts1.trim().equals("")) {
+                                resluts[i+1] = "0";
+                            }
+                        }
+                        cr.copyResultAndLogs(resluts[0], XTS, SN, command);//如果上面的拷贝失败了，就拷贝最初的结果
+                        cr.sendto121();//发送结果到121服务器
+                        WebServiceBean.sendStutaPost(taskId,"7",XTS.toUpperCase()+"测试完成！"+"&passed="+resluts[4]+"&failed="+resluts[1]+"&doneM="+resluts[2]+"&totalM="+resluts[3]);//发送状态给服务器
+                    }
+                }
+            }else {//出现异常
+                WebServiceBean.sendStutaPost(taskId,"-1",resluts[1]);//发送状态给服务器
+            }
+        }else {//如果环境配置失败
+            WebServiceBean.sendStutaPost(taskId,"-1",run[1]);//发送状态给服务器
+            System.out.println(run[1]);
+        }
+        System.out.println("结束"+XTS+"测试！---");
+
+
+        return null;
+    }
+}

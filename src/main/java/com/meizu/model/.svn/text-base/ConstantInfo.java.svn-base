@@ -1,0 +1,20 @@
+package com.meizu.model;
+
+/**
+ * Created by wuzhaolin on 17-5-5.
+ * 据库中的常量
+ */
+public class ConstantInfo {
+    public static final String Modular="MODULAR";//模块
+    public static final String Packge="PACKGE";//包
+    public static final String Class="CLASS";//类
+    public static final String Method="METHOD";//方法
+    public static final String IsTested="ISTESTED";//是否测试完成
+    public static final String Result="RESULT";//结果
+    public static final String Details="DETAILS";//描述
+    public static final String ID="ID";//
+    public static final String SN="SN";//SN号
+    public static final String Status="STATUS";//状态
+    public static final String TaskId="TASKID";//任务ID
+
+}

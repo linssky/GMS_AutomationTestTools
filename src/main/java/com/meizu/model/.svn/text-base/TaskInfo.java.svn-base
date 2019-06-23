@@ -1,0 +1,112 @@
+package com.meizu.model;
+
+import com.meizu.utils.DevicesUtils;
+
+import java.util.List;
+
+/**
+ * Created by zengliang on 2017/5/17.
+ */
+public class TaskInfo {
+    public static List<DevicesInfo> devicesInfos=new DevicesUtils().getDevicesInfo("");
+
+
+    private String mModularName;//模块名
+    private String mPackageName;//包名
+    private String mClassName;//类名
+    private String mMethodName;//方法名
+    private String isTested;//是否已被测试
+    private String mResult;//测试结果
+    private String mDetails;//测试结果详情
+    private int mTaskID;//任务ID
+    private String mBit;//测试系统位数
+
+
+    public int getTaskID() {
+        return mTaskID;
+    }
+
+    public void setTaskID(int taskID) {
+        this.mTaskID = taskID;
+    }
+
+    public String getModularName() {
+        return mModularName;
+    }
+
+    public void setModularName(String modularName) {
+        this.mModularName = modularName;
+    }
+
+    public String getPackageName() {
+        return mPackageName;
+    }
+
+    public void setPackageName(String packageName) {
+        this.mPackageName = packageName;
+    }
+
+    public String getClassName() {
+        return mClassName;
+    }
+
+    public void setClassName(String className) {
+        this.mClassName = className;
+    }
+
+    public String getMethodName() {
+        return mMethodName;
+    }
+
+    public void setMethodName(String methodName) {
+        this.mMethodName = methodName;
+    }
+
+    public String isTested() {
+        return isTested;
+    }
+
+    public void setIsTested(String isTested) {
+        this.isTested = isTested;
+    }
+
+    public String getResult() {
+        return mResult;
+    }
+
+    public void setResult(String result) {
+        this.mResult = result;
+    }
+
+    public String getDetails() {
+        return mDetails;
+    }
+
+    public void setDetails(String details) {
+        this.mDetails = details;
+    }
+
+    public String getBit() {
+        return mBit;
+    }
+
+    public void setBit(String bit) {
+        this.mBit = bit;
+    }
+
+    @Override
+    public String toString() {
+        return "TaskInfo{" +
+                "ModularName='" + mModularName + '\'' +
+                ", PackageName='" + mPackageName + '\'' +
+                ", ClassName='" + mClassName + '\'' +
+                ", MethodName='" + mMethodName + '\'' +
+                ", isTested='" + isTested + '\'' +
+                ", Result='" + mResult + '\'' +
+                ", Details='" + mDetails + '\'' +
+                ", TaskID='" + mTaskID + '\'' +
+                ", Bit='" + mBit + '\'' +
+                '}';
+    }
+
+}

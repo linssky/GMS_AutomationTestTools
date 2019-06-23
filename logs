@@ -1,0 +1,64 @@
+心跳汇报……………………
+DisplayName:eth0
+Name:eth0
+IP:fe80:0:0:0:527b:9dff:fe01:7876%eth0
+-----post的数据是：[{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051532","model":"m1891","sn":"891QBES722236","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"},{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051573","model":"m1891","sn":"891QBES722238","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"}]
+心跳地址：http://ats.meizu.com/gms/device/heartbeat
+05-28 20:16:25 W/CompatibilityTest: waiting on preconditions
+心跳汇报……………………
+DisplayName:eth0
+Name:eth0
+IP:fe80:0:0:0:527b:9dff:fe01:7876%eth0
+-----post的数据是：[{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051532","model":"m1891","sn":"891QBES722236","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"},{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051573","model":"m1891","sn":"891QBES722238","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"}]
+心跳地址：http://ats.meizu.com/gms/device/heartbeat
+心跳汇报……………………
+DisplayName:eth0
+Name:eth0
+IP:fe80:0:0:0:527b:9dff:fe01:7876%eth0
+-----post的数据是：[{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051532","model":"m1891","sn":"891QBES722236","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"},{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051573","model":"m1891","sn":"891QBES722238","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"}]
+心跳地址：http://ats.meizu.com/gms/device/heartbeat
+05-28 20:18:25 W/CompatibilityTest: waiting on preconditions
+心跳汇报……………………
+DisplayName:eth0
+Name:eth0
+IP:fe80:0:0:0:527b:9dff:fe01:7876%eth0
+-----post的数据是：[{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051532","model":"m1891","sn":"891QBES722236","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"},{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051573","model":"m1891","sn":"891QBES722238","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"}]
+心跳地址：http://ats.meizu.com/gms/device/heartbeat
+心跳汇报……………………
+DisplayName:eth0
+Name:eth0
+IP:fe80:0:0:0:527b:9dff:fe01:7876%eth0
+-----post的数据是：[{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051532","model":"m1891","sn":"891QBES722236","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"},{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051573","model":"m1891","sn":"891QBES722238","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"}]
+心跳地址：http://ats.meizu.com/gms/device/heartbeat
+05-28 20:20:25 W/CompatibilityTest: waiting on preconditions
+心跳汇报……………………
+DisplayName:eth0
+Name:eth0
+IP:fe80:0:0:0:527b:9dff:fe01:7876%eth0
+-----post的数据是：[{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051532","model":"m1891","sn":"891QBES722236","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"},{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051573","model":"m1891","sn":"891QBES722238","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"}]
+心跳地址：http://ats.meizu.com/gms/device/heartbeat
+心跳汇报……………………
+DisplayName:eth0
+Name:eth0
+IP:fe80:0:0:0:527b:9dff:fe01:7876%eth0
+-----post的数据是：[{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051532","model":"m1891","sn":"891QBES722236","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"},{"haveSIM":"0","ip":"172.17.137.159","imei":"866777030051573","model":"m1891","sn":"891QBES722238","flyme":"flyme7","firmware":"7.0-20180525191249","taskid":"60","androidversion":"7.0","status":"2"}]
+心跳地址：http://ats.meizu.com/gms/device/heartbeat
+05-28 20:22:25 E/CompatibilityTest: Incorrect preparation detected, exiting test run from 891QBES722236
+05-28 20:22:25 D/ResultReporter: Saved logs for device_logcat_test in /home/wuzhaolin/./GMSTools/gts/android-gts/tools/../../android-gts/logs/2018.05.28_19.59.56/inv_2437882218362315917/device_logcat_test_114555677125565382.txt.gz
+05-28 20:22:25 W/FileUtil: Chmod is not supported by this OS.
+05-28 20:22:25 W/FileUtil: Chmod is not supported by this OS.
+05-28 20:22:26 D/ResultReporter: Saved logs for device_logcat_teardown in /home/wuzhaolin/./GMSTools/gts/android-gts/tools/../../android-gts/logs/2018.05.28_19.59.56/inv_2437882218362315917/device_logcat_teardown_4474256101568670971.txt.gz
+05-28 20:22:26 W/FileUtil: Chmod is not supported by this OS.
+05-28 20:22:26 W/FileUtil: Chmod is not supported by this OS.
+05-28 20:22:26 D/ResultReporter: Saved logs for host_log in /home/wuzhaolin/./GMSTools/gts/android-gts/tools/../../android-gts/logs/2018.05.28_19.59.56/inv_2437882218362315917/host_log_1837335986047071180.txt.gz
+05-28 20:22:26 W/FileUtil: Chmod is not supported by this OS.
+05-28 20:22:26 W/FileUtil: Chmod is not supported by this OS.
+05-28 20:22:26 I/ResultReporter: Test Result: /home/wuzhaolin/GMSTools/gts/android-gts/results/2018.05.28_19.59.56/test_result_failures.html
+05-28 20:22:26 I/ResultReporter: Test Logs: /home/wuzhaolin/GMSTools/gts/android-gts/logs/2018.05.28_19.59.56
+05-28 20:22:26 D/ResultReporter: Full Result: /home/wuzhaolin/GMSTools/gts/android-gts/results/2018.05.28_19.59.56.zip
+05-28 20:22:26 I/ResultReporter: Invocation finished in 22m 30s. PASSED: 0, FAILED: 0, MODULES: 0 of 57
+Saved log to /tmp/tradefed_global_log_6767309940258286496.txt
+05-28 20:22:26 I/CommandScheduler: All done
+post:http://ats.meizu.com/gms/task_statustask_id=60&status=5&message=GTSRetry中！
+{"status": 0, "message": "\u4efb\u52a1\u72b6\u6001\u6c47\u62a5\u6210\u529f", "data": []}
+

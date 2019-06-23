@@ -1,0 +1,5 @@
+ ls /usr/bin | grep expect 
+
+如果显示为空，则使用以下命令安装
+
+sudo apt-get install tcl tk expect
